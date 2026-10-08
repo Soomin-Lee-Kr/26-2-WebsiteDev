@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function changeHeader() {
+            let myHeader = document.getElementById("header");
+            myHeader.innerHTML = "Hello new header";
+            myHeader.style.color = "red";
+
+            //document.getElementById("header").innerHTML = "Hello new header";
+            //document.getElementById("header").style.color = "blue";
+        }
+    </script>
+</head>
+<body>
+
+    <div id="output">What is your name?</div>
+    <input type="text" id="inputField" placeholder="Enter your name">
+    <button onclick="updateText()">Update Text</button>
+
+    <script>
+        function updateText() {
+            let yourName=document.getElementById("inputField").value;
+            let composedText="<h1>Your name is " + yourName + "</h1>";
+            document.getElementById("output").innerHTML=composedText;
+        }
+    </script>
+
+     <h2 id="header">Hello header</h2>
+     <button onclick="changeHeader()">Change Header</button>
+    
+    <script>
+/*
+        let animal=prompt("What is your favorite animal?");
+        console.log("You love "+ animal);
+        alert("You love "+ animal+ " right?");
+*/
+        /*Today is a great day
+        We will miss these days*/
+        let result=14%5; //remainder operator
+        console.log("Remainder is "+ result);
+        let a=5;
+        a=a+20; // a+=20;
+        let b=10;
+        let sum;
+        sum = a + b;
+        console.log("Sum = "+ sum);
+
+    </script> 
+    
+    <p id="hold">Some text</p>
+
+    <script>
+        document.getElementById("hold").innerHTML = "I don't know what to say";
+        console.log("Hello JS");
+        console.log("Fall is great!");
+    </script>
+</body>
+</html>
